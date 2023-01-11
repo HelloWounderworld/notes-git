@@ -915,10 +915,53 @@ Seção 05 - Github:
             https://danizavtz.com.br/git-github-the-requested-url-returned-error-403/
         Para resolvermos esse problema, vamos ter que realizar o mesmo procedimento que é feito no Bitbucket:
             https://docs.github.com/pt/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+        
+        Feito as burocracias acima e dado o push, irá aparecer a seguinte msg
+            leonardo@leonardo-Dell-G15-5520:~/Documentos/estudos/notes-git$ git push
+            Enumerating objects: 5, done.
+            Counting objects: 100% (5/5), done.
+            Delta compression using up to 16 threads
+            Compressing objects: 100% (3/3), done.
+            Writing objects: 100% (3/3), 880 bytes | 880.00 KiB/s, done.
+            Total 3 (delta 2), reused 0 (delta 0)
+            remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+            To github.com:HelloWounderworld/notes-git.git
+            b2c9f7f..82864fb  main -> main
+        Isso indicará que deu certo o push.
+
+        Uma outra funcionalidade que vem no git, ao realizar a sua instalação, é o git credentials manager.
+        Nela vc pode configurar o usuário e a senha, para que nas próximas vezes em que vc der o push não ter que dar o trabalho de ficar toda hora digitando.
+
+        Agora, pelo Github, podemos verificar o nosso histórico de commits desse repositório em que estamos trabalhando e os tipos de arquivos que estão sendo ou não adicionados ou removidos.
 
     Aula 05 - Baixando a última versão do repositório:
+        Suponhamos uma situação em que o projeto que vc havía baixado para sua máquina local e que vc estava realizando as devidas modificações sobre elas, esteja desatualizado.
+        Ou seja, enquanto vc estava realizando as mudanças uma outra pessoa havia dado um push no mesmo repositório remoto em que vc baixou na sua máquina na mesma branch.
+        Vamos precisar atualizar esse projeto em que vc está mexendo.
+        No caso, pelo Github, vamos alterar o arquivo main.html, onde está o texto "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", vamos substituir por "Aprendendo Git".
+        Visto que agora o projeto que vc tem na sua máquina do mesmo repositório está desatualizado, vamos precisar atualiza-la.
+        Para isso o comando seria o seguinte:
+            - git pull
+        Note que, ao darmos esse comando acima, temos a seguinte msg.
+            remote: Enumerating objects: 7, done.
+            remote: Counting objects: 100% (7/7), done.
+            remote: Compressing objects: 100% (4/4), done.
+            remote: Total 4 (delta 3), reused 0 (delta 0), pack-reused 0
+            Unpacking objects: 100% (4/4), 773 bytes | 257.00 KiB/s, done.
+            From github.com:HelloWounderworld/notes-git
+            82864fb..3b0342a  main       -> origin/main
+            Updating 82864fb..3b0342a
+            Fast-forward
+            Website/main.html | 4 ++--
+            1 file changed, 2 insertions(+), 2 deletions(-)
+        Ao mesmo tempo, ao vermos o arquivo main.html, nela estará mostrando a alteração feita.
 
     Aula 06 - Star, observe e fork:
+        Leitura:
+            https://www.analyticsvidhya.com/blog/2021/07/analyzing-popular-repositories-on-github/
+            https://pt.stackoverflow.com/questions/143458/o-que-essas-palavras-significam-no-git-github-fork-clone-track
+            https://docs.github.com/pt/get-started/exploring-projects-on-github/saving-repositories-with-stars
+            https://git-scm.com/book/pt-br/v2/GitHub-Contribuindo-em-um-projeto
 
     Aula 07 - Pull request:
 
