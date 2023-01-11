@@ -895,7 +895,26 @@ Seção 05 - Github:
             leonardo@leonardo-Dell-G15-5520:~/Documentos/estudos/notes-git$ git branch
             * main
         Agora, vamos copiar e colar todas as coisas que tem no repositório Udemy-Git que havíamos baixado antes.
-        Em seguida, vamos dar o git add e git commit.
+        Em seguida, vamos dar o git add e git commit, quando dou o commit é o momento em que todos os meus arquivos são versionados.
+        Agora, vamos precisar enviar esse versionamento para o repositório do github.
+        Precisamos ver se é possível darmos o push.
+        Para isso, vamos precisar dar o git status para verificarmos se isso é possível.
+            leonardo@leonardo-Dell-G15-5520:~/Documentos/estudos/notes-git$ git status
+            On branch main
+            Your branch is ahead of 'origin/main' by 1 commit.
+            (use "git push" to publish your local commits)
+
+            Changes not staged for commit:
+            (use "git add <file>..." to update what will be committed)
+            (use "git restore <file>..." to discard changes in working directory)
+                modified:   Notas-Aula
+
+            no changes added to commit (use "git add" and/or "git commit -a")
+        Então, damos o git push, visto que a msg acima exibido.
+        Motivos de não estar sendo possível dar o push:
+            https://danizavtz.com.br/git-github-the-requested-url-returned-error-403/
+        Para resolvermos esse problema, vamos ter que realizar o mesmo procedimento que é feito no Bitbucket:
+            https://docs.github.com/pt/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
 
     Aula 05 - Baixando a última versão do repositório:
 
