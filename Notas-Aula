@@ -964,6 +964,13 @@ Seção 05 - Github:
             https://git-scm.com/book/pt-br/v2/GitHub-Contribuindo-em-um-projeto
 
     Aula 07 - Pull request:
+        Leitura para conceito:
+            https://docs.github.com/pt/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request
+
+        Basicamente, ele serve para submeter as suas mudanças para um projeto que vc estiver trabalhando do outro.
+        A submissão irá passar por análise do dono do projeto se ele irá ou não aceitar tal mudança.
+        No caso, o pull request é uma forma de vc conseguir realizar alguma contribuição para o trabalho de outra pessoa.
+        Basicamente, é isso que pode enriquecer drásticamente o seu currículo, pois se vc realizar alguma contribuição para um projeto bem grande, mesmo não tendo nenhum retorno financeiro para ti, isso irá pesar muito no seu currículo.
 
     Aula 08 - Issue, milestones, labels:
 
