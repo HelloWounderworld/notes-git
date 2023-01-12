@@ -1133,6 +1133,76 @@ Seção 07 - Branches:
             https://github.com/DevMasterTeam/Udemy-Git/blob/master/Se%C3%A7%C3%A3o%2007%20-%20Branches/(Slide)%20Detached%20HEAD.pdf
         No caso, nela permite que vc faça as alterações sobre ela e que tal alteração não impactará nenhuma outra branch, lembrando que as branchs são independentes.
         Vamos experimentar isso modificando o arquivo main.html que temos no diretório Website, o título Aprendendo Git.
+            leonardo@leonardo-Dell-G15-5520:~/Documentos/estudos/notes-git$ git log --oneline
+            a953567 (HEAD -> main, origin/main, origin/HEAD) Atualizando as notas de aula
+            b8f4ddf Atualizando as notas de aula
+            a66b0c0 Atualizando as notas de aula
+            51783b7 Atualizando notas de aula
+            cc635a1 (TASK-2) Atualizando as notas de aula
+            8c83887 Atualizando as notas de aula com o usuario certo
+            0fc34ee (TASK-1) Atualizando as notas de aula sobre git - controle de versionamento
+            684b766 (develop) Vantagens de pull request para enriquecer o teu curriculo
+            0ac21b5 Leituras para Star, Watch e Fork
+            3b0342a Atualizacao do titulo
+            82864fb Forma de dar push no github - novas regras
+            b2c9f7f Versao inicial do site
+            cd08034 Commit inicial
+            ad8b997 Initial commit
+            leonardo@leonardo-Dell-G15-5520:~/Documentos/estudos/notes-git$ git checkout b8f4ddf
+            Note: switching to 'b8f4ddf'.
+
+            You are in 'detached HEAD' state. You can look around, make experimental
+            changes and commit them, and you can discard any commits you make in this
+            state without impacting any branches by switching back to a branch.
+
+            If you want to create a new branch to retain commits you create, you may
+            do so (now or later) by using -c with the switch command. Example:
+
+            git switch -c <new-branch-name>
+
+            Or undo this operation with:
+
+            git switch -
+
+            Turn off this advice by setting config variable advice.detachedHead to false
+
+            HEAD is now at b8f4ddf Atualizando as notas de aula
+            leonardo@leonardo-Dell-G15-5520:~/Documentos/estudos/notes-git$ git status
+            HEAD detached at b8f4ddf
+            Changes not staged for commit:
+            (use "git add <file>..." to update what will be committed)
+            (use "git restore <file>..." to discard changes in working directory)
+                modified:   Website/main.html
+
+            no changes added to commit (use "git add" and/or "git commit -a")
+            leonardo@leonardo-Dell-G15-5520:~/Documentos/estudos/notes-git$ git switch -c head-example
+            Switched to a new branch 'head-example'
+            leonardo@leonardo-Dell-G15-5520:~/Documentos/estudos/notes-git$ git add .
+            leonardo@leonardo-Dell-G15-5520:~/Documentos/estudos/notes-git$ git commit -m "Entendendo Detached Head"
+            [head-example 552b13d] Entendendo Detached Head
+            1 file changed, 1 insertion(+), 1 deletion(-)
+            leonardo@leonardo-Dell-G15-5520:~/Documentos/estudos/notes-git$ git push
+            fatal: The current branch head-example has no upstream branch.
+            To push the current branch and set the remote as upstream, use
+
+                git push --set-upstream origin head-example
+
+            leonardo@leonardo-Dell-G15-5520:~/Documentos/estudos/notes-git$ git push --set-upstream origin head-example
+            Enumerating objects: 7, done.
+            Counting objects: 100% (7/7), done.
+            Delta compression using up to 16 threads
+            Compressing objects: 100% (4/4), done.
+            Writing objects: 100% (4/4), 487 bytes | 487.00 KiB/s, done.
+            Total 4 (delta 3), reused 0 (delta 0)
+            remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+            remote: 
+            remote: Create a pull request for 'head-example' on GitHub by visiting:
+            remote:      https://github.com/HelloWounderworld/notes-git/pull/new/head-example
+            remote: 
+            To github.com:HelloWounderworld/notes-git.git
+            * [new branch]      head-example -> head-example
+            Branch 'head-example' set up to track remote branch 'head-example' from 'origin'
+        Logo, faltaria dar o git merge para juntarmos as modificações com a branch principal.
 
     Aula 05 - Enviando branch para o repositório remoto:
 
