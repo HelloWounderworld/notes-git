@@ -1249,7 +1249,61 @@ Seção 07 - Branches:
     Aula 07 - Removendo branch remota:
         O comando para fazer isso, seria:
             - git push --delete (caminho) (nome da branch)
-                
+                leonardo@leonardo-Dell-G15-5520:~/Documentos/estudos/notes-git$ git checkout TASK5
+                Switched to branch 'TASK5'
+                leonardo@leonardo-Dell-G15-5520:~/Documentos/estudos/notes-git$ git status
+                On branch TASK5
+                Changes not staged for commit:
+                (use "git add <file>..." to update what will be committed)
+                (use "git restore <file>..." to discard changes in working directory)
+                    modified:   Notas-Aula
+
+                no changes added to commit (use "git add" and/or "git commit -a")
+                leonardo@leonardo-Dell-G15-5520:~/Documentos/estudos/notes-git$ git add .
+                leonardo@leonardo-Dell-G15-5520:~/Documentos/estudos/notes-git$ git commit -m "Teste"
+                [TASK5 3317431] Teste
+                1 file changed, 1 insertion(+), 1 deletion(-)
+                leonardo@leonardo-Dell-G15-5520:~/Documentos/estudos/notes-git$ git push --set-upstream origin TASK5
+                Enumerating objects: 5, done.
+                Counting objects: 100% (5/5), done.
+                Delta compression using up to 16 threads
+                Compressing objects: 100% (3/3), done.
+                Writing objects: 100% (3/3), 326 bytes | 326.00 KiB/s, done.
+                Total 3 (delta 2), reused 0 (delta 0)
+                remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+                remote: 
+                remote: Create a pull request for 'TASK5' on GitHub by visiting:
+                remote:      https://github.com/HelloWounderworld/notes-git/pull/new/TASK5
+                remote: 
+                To github.com:HelloWounderworld/notes-git.git
+                * [new branch]      TASK5 -> TASK5
+                Branch 'TASK5' set up to track remote branch 'TASK5' from 'origin'.
+                leonardo@leonardo-Dell-G15-5520:~/Documentos/estudos/notes-git$ git push --delete origin TASK5
+                To github.com:HelloWounderworld/notes-git.git
+                - [deleted]         TASK5
+        Não se esqueça de que no passo, onde vc deu o git push -u, se certificar que a tal branch de fato se encontra criada no teu repositório.
+            leonardo@leonardo-Dell-G15-5520:~/Documentos/estudos/notes-git$ git checkout main
+            Switched to branch 'main'
+            Your branch is up to date with 'origin/main'.
+            leonardo@leonardo-Dell-G15-5520:~/Documentos/estudos/notes-git$ git branch
+            TASK5
+            develop
+            head-example
+            * main
+            leonardo@leonardo-Dell-G15-5520:~/Documentos/estudos/notes-git$ git branch -d TASK5
+            error: The branch 'TASK5' is not fully merged.
+            If you are sure you want to delete it, run 'git branch -D TASK5'.
+            leonardo@leonardo-Dell-G15-5520:~/Documentos/estudos/notes-git$ gt branch -D TASK5
+
+            Comando 'gt' não encontrado, mas poder ser instalado com:
+
+            sudo apt install genometools
+
+            leonardo@leonardo-Dell-G15-5520:~/Documentos/estudos/notes-git$ git branch -D TAKS5
+            error: branch 'TAKS5' not found.
+            leonardo@leonardo-Dell-G15-5520:~/Documentos/estudos/notes-git$ git branch -D TASK5
+            Deleted branch TASK5 (was 3317431).
+        Note que, o comando que serviu para deletar a branch no repositório, ela não deletou a branch local?
 
     Aula 08 - Renomeando branch:
 
