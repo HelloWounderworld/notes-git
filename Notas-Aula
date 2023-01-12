@@ -1370,6 +1370,9 @@ Seção 07 - Branches:
         Lembre-se, se vc estiver fazendo um trabalho em conjunto, e fizer algo de alteração dessa natureza, avisa ao time.                                                                      
 
     Aula 09 - Histórico de alteraçãoes em diferente branch:
+        Podemos ver o histórico de commits de outras branchs sem acessar elas, localmente, da segunite forma:
+            - git log (nome da branch existente)
+        Daí, com a forma acima vc consegue combinar com outras formas de comando de git log existente, por exemplo, git log (nome da branch) --oneline.
 
 Seção 08 - Merge:
 
