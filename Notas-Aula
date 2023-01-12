@@ -1247,6 +1247,9 @@ Seção 07 - Branches:
         Por isso, sempre que vc for remover uma branch local, tenha certeza do que esteja fazendo.
 
     Aula 07 - Removendo branch remota:
+        O comando para fazer isso, seria:
+            - git push --delete (caminho) (nome da branch)
+                
 
     Aula 08 - Renomeando branch:
 
