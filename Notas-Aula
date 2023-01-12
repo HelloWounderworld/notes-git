@@ -973,14 +973,73 @@ Seção 05 - Github:
         Basicamente, é isso que pode enriquecer drásticamente o seu currículo, pois se vc realizar alguma contribuição para um projeto bem grande, mesmo não tendo nenhum retorno financeiro para ti, isso irá pesar muito no seu currículo.
 
     Aula 08 - Issue, milestones, labels:
+        Leituras:
+            Issue:
+                https://pt.stackoverflow.com/questions/101706/pra-que-serve-o-issue-no-github
+                https://docs.github.com/pt/issues/tracking-your-work-with-issues/creating-an-issue
+                https://imasters.com.br/desenvolvimento/5-dicas-sobre-issues-e-comentarios-no-github
+            
+            Milestones:
+                https://pt.stackoverflow.com/questions/160607/para-que-serve-o-campo-milestone-no-github#:~:text=A%20funcionalidade%20milestone%20(etapa%20em,para%20a%20etapa%20estar%20completa.
+                https://docs.github.com/pt/issues/using-labels-and-milestones-to-track-work/creating-and-editing-milestones-for-issues-and-pull-requests
+                https://eltonminetto.dev/post/2017-11-13-boas-praticas-tarefas-pr-commits/
+            
+            Labels:
+                https://docs.github.com/pt/issues/using-labels-and-milestones-to-track-work/managing-labels
+                https://docs.github.com/pt/rest/issues/labels?apiVersion=2022-11-28
 
     Aula 09 - Arquivo READ.me:
+        https://dillinger.io/
+
+        No link acima estará as funcionalidades mais comuns de se utilizarem ao arquivo READ.me para possibilitar que vc personalize o seu READ.me para finalidades que vc queria.
+        Vale salientar que o arquivo READ.me, ela serve como uma espécie de apresentação do projeto, sobre vc em sí, etc...
+        Um bom portifólio de github, implica em vc ter um bom READ.me para apresentação.
 
     Aula 10 - Chave SSH:
+        Isso foi resolvido na aula 04 dessa seção.
 
 Seção 06 - Bitbucket:
+    Aula 01 - Introdução ao Bitbucket:
+        https://bitbucket.org/
+
+        Já uso isso na empresa onde trampo.
 
 Seção 07 - Branches:
+
+    Aula 01 - Conceitos sobre Branch:
+        https://github.com/DevMasterTeam/Udemy-Git/blob/master/Se%C3%A7%C3%A3o%2007%20-%20Branches/(Slide)%20Conceitos%20sobre%20branch.pdf
+
+        Branch é uma ramificaçõ no projeto que permite que funcionalidades sejam desenvolvidas separadamente sem impactar funcionalidades estáveis no projeto.
+        Uma branch permite realizar testes e ser consideradas apenas aqueles testes que deram certos, usando a mesclagem.
+    
+    Aula 02 - Criando Branch local:
+        Para verificar em qual branch o seu repositório se encontra no local:
+            - git branch
+        Para verificar quais branchs a sua local tem:
+            - git branch --list
+        Para criamos a branch localmente:
+            - git branch (nome da branch nova que vc pode denotar)
+                leonardo@leonardo-Dell-G15-5520:~/Documentos/estudos/notes-git$ git branch develop
+                leonardo@leonardo-Dell-G15-5520:~/Documentos/estudos/notes-git$ git branch --list
+                develop
+                * main
+        Para mudar de uma branch para outra:
+            - git checkout (nome da branch existente)
+                
+
+    Aula 03 - Mudançãs não salvas:
+
+    Aula 04 - Detached HEAD:
+
+    Aula 05 - Enviando branch para o repositório remoto:
+
+    Aula 06 - Removendo branch local:
+
+    Aula 07 - Removendo branch remota:
+
+    Aula 08 - Renomeando branch:
+
+    Aula 09 - Histórico de alteraçãoes em diferente branch:
 
 Seção 08 - Merge:
 
