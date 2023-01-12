@@ -1025,7 +1025,26 @@ Seção 07 - Branches:
                 * main
         Para mudar de uma branch para outra:
             - git checkout (nome da branch existente)
-                
+                leonardo@leonardo-Dell-G15-5520:~/Documentos/estudos/notes-git$ git checkout develop
+                M	Notas-Aula
+                Switched to branch 'develop'
+                leonardo@leonardo-Dell-G15-5520:~/Documentos/estudos/notes-git$ git branch
+                * develop
+                main
+        No caso, visto que temos duas branchs, não interessa o que acontece na branch develop e isso não influencia nada na branch main.
+        Para criar uma branch nova no local e ainda mudar para ela:
+            - git checkout -b (atribuir um nome novo para essa branch)
+                leonardo@leonardo-Dell-G15-5520:~/Documentos/estudos/notes-git$ git branch
+                develop
+                * main
+                leonardo@leonardo-Dell-G15-5520:~/Documentos/estudos/notes-git$ git checkout -b TASK-1
+                Switched to a new branch 'TASK-1'
+                leonardo@leonardo-Dell-G15-5520:~/Documentos/estudos/notes-git$ git branch
+                * TASK-1
+                develop
+                main
+        Obs: Os nomes das branchs não podem ter espaços. Procure sempre conectar com traços.
+
 
     Aula 03 - Mudançãs não salvas:
 
