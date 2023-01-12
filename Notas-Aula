@@ -1044,6 +1044,23 @@ Seção 07 - Branches:
                 develop
                 main
         Obs: Os nomes das branchs não podem ter espaços. Procure sempre conectar com traços.
+        Temos um caso em que podemos criar ou mudar para uma branch:
+            - git switch (nome da branch existente ou da nova que vc queira criar)
+            - git switch - - Esse comando serve para vc voltar na branch anterior.
+                leonardo@leonardo-Dell-G15-5520:~/Documentos/estudos/notes-git$ git switch develop
+                Switched to branch 'develop'
+                leonardo@leonardo-Dell-G15-5520:~/Documentos/estudos/notes-git$ git branch
+                TASK-1
+                * develop
+                main
+                leonardo@leonardo-Dell-G15-5520:~/Documentos/estudos/notes-git$ git switch -
+                Switched to branch 'main'
+                Your branch is up to date with 'origin/main'.
+                leonardo@leonardo-Dell-G15-5520:~/Documentos/estudos/notes-git$ git branch
+                TASK-1
+                develop
+                * main
+            
 
 
     Aula 03 - Mudançãs não salvas:
