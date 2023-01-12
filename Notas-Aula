@@ -1205,6 +1205,10 @@ Seção 07 - Branches:
         Logo, faltaria dar o git merge para juntarmos as modificações com a branch principal.
 
     Aula 05 - Enviando branch para o repositório remoto:
+        O envio já foi feito na aula anterior.
+        No caso, o comando que foi usado foi:
+            - git push --set-upstream origin head-example
+            - git push -u origin head-example - Serviria tbm.
 
     Aula 06 - Removendo branch local:
 
