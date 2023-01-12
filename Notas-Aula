@@ -1094,6 +1094,7 @@ Seção 07 - Branches:
         Note que, ao darmos um git checkout . ou git checkout -f, e se vc quiser que o arquivo que vc estava modificando volte na forma como vc estava modificando, basta dar Crtl+z ou Command + Z.
 
     Aula 04 - Detached HEAD:
+        Vamos começar fazendo o git log --oneline.
 
     Aula 05 - Enviando branch para o repositório remoto:
 
