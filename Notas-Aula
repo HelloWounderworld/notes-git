@@ -1215,6 +1215,36 @@ Seção 07 - Branches:
         Isso é devido ao fato de que a branch main já vem com esse detalhe configurado.
 
     Aula 06 - Removendo branch local:
+        O comando para deletar as branchs criadas localmente é:
+            - git branch -d (nome da branch)
+                leonardo@leonardo-Dell-G15-5520:~/Documentos/estudos/notes-git$ git branch
+                TASK-1
+                TASK-2
+                develop
+                head-example
+                * main
+                leonardo@leonardo-Dell-G15-5520:~/Documentos/estudos/notes-git$ git branch -d TASK-1
+                Deleted branch TASK-1 (was 0fc34ee).
+                leonardo@leonardo-Dell-G15-5520:~/Documentos/estudos/notes-git$ git branch
+                TASK-2
+                develop
+                head-example
+                * main
+        Caso vc queira fazer a remoção de forma forçada, sem que o git te pergunte se realmente quer mesmo remover a tal branch:
+            - git branch -D (nome da branch)
+                leonardo@leonardo-Dell-G15-5520:~/Documentos/estudos/notes-git$ git branch
+                TASK-2
+                develop
+                head-example
+                * main
+                leonardo@leonardo-Dell-G15-5520:~/Documentos/estudos/notes-git$ git branch -D TASK-2
+                Deleted branch TASK-2 (was cc635a1).
+                leonardo@leonardo-Dell-G15-5520:~/Documentos/estudos/notes-git$ git branch
+                develop
+                head-example
+                * main
+        Lembre-se que essa remoção de branch, em ambos os casos, vc estará excluindo até os históricos de commits que vc deu para essa branch.
+        Por isso, sempre que vc for remover uma branch local, tenha certeza do que esteja fazendo.
 
     Aula 07 - Removendo branch remota:
 
