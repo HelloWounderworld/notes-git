@@ -1308,7 +1308,25 @@ Seção 07 - Branches:
     Aula 08 - Renomeando branch:
         O comando para alterar o nome da branch é:
             - git branch -m (nome novo para a branch) - Vc precisa tar na branch que quer alterar o nome.
-                
+                leonardo@leonardo-Dell-G15-5520:~/Documentos/estudos/notes-git$ git checkout -b TASK1
+                Switched to a new branch 'TASK1'
+                leonardo@leonardo-Dell-G15-5520:~/Documentos/estudos/notes-git$ git branch
+                * TASK1
+                develop
+                head-example
+                main
+                leonardo@leonardo-Dell-G15-5520:~/Documentos/estudos/notes-git$ git branch -m TASK10
+                leonardo@leonardo-Dell-G15-5520:~/Documentos/estudos/notes-git$ git branch
+                * TASK10
+                develop
+                head-example
+                main
+        Caso vc queira alterar o nome da branch sem estar nela, local, seria:
+            - git branch -m (nome da branch que vc quer trocar o nome) (nome novo para essa branch)
+
+        Obs: Uma vez enviada a branch ao servidor remoto, não tem possibilidade de alterar o nome.
+        Podemos contornar a observação acima da seguinte forma:
+            -                                                                               
 
     Aula 09 - Histórico de alteraçãoes em diferente branch:
 
