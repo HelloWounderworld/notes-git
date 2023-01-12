@@ -1306,6 +1306,9 @@ Seção 07 - Branches:
         Note que, o comando que serviu para deletar a branch no repositório, ela não deletou a branch local?
 
     Aula 08 - Renomeando branch:
+        O comando para alterar o nome da branch é:
+            - git branch -m (nome novo para a branch) - Vc precisa tar na branch que quer alterar o nome.
+                
 
     Aula 09 - Histórico de alteraçãoes em diferente branch:
 
