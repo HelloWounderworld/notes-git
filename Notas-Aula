@@ -1326,7 +1326,48 @@ Seção 07 - Branches:
 
         Obs: Uma vez enviada a branch ao servidor remoto, não tem possibilidade de alterar o nome.
         Podemos contornar a observação acima da seguinte forma:
-            -                                                                               
+            leonardo@leonardo-Dell-G15-5520:~/Documentos/estudos/notes-git$ git checkout TASK5
+            Switched to branch 'TASK5'
+            leonardo@leonardo-Dell-G15-5520:~/Documentos/estudos/notes-git$ git add .
+            leonardo@leonardo-Dell-G15-5520:~/Documentos/estudos/notes-git$ git commit -m "Teste"
+            [TASK5 411d8b4] Teste
+            1 file changed, 1 insertion(+), 1 deletion(-)
+            leonardo@leonardo-Dell-G15-5520:~/Documentos/estudos/notes-git$ git push -u origin TASK5
+            Enumerating objects: 5, done.
+            Counting objects: 100% (5/5), done.
+            Delta compression using up to 16 threads
+            Compressing objects: 100% (3/3), done.
+            Writing objects: 100% (3/3), 329 bytes | 329.00 KiB/s, done.
+            Total 3 (delta 2), reused 0 (delta 0)
+            remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+            remote: 
+            remote: Create a pull request for 'TASK5' on GitHub by visiting:
+            remote:      https://github.com/HelloWounderworld/notes-git/pull/new/TASK5
+            remote: 
+            To github.com:HelloWounderworld/notes-git.git
+            * [new branch]      TASK5 -> TASK5
+            Branch 'TASK5' set up to track remote branch 'TASK5' from 'origin'.
+            leonardo@leonardo-Dell-G15-5520:~/Documentos/estudos/notes-git$ git push --delete origin TASK5
+            To github.com:HelloWounderworld/notes-git.git
+            - [deleted]         TASK5
+            leonardo@leonardo-Dell-G15-5520:~/Documentos/estudos/notes-git$ git branch -m TASK10
+            leonardo@leonardo-Dell-G15-5520:~/Documentos/estudos/notes-git$ git push -u origin TASK10
+            Enumerating objects: 5, done.
+            Counting objects: 100% (5/5), done.
+            Delta compression using up to 16 threads
+            Compressing objects: 100% (3/3), done.
+            Writing objects: 100% (3/3), 329 bytes | 329.00 KiB/s, done.
+            Total 3 (delta 2), reused 0 (delta 0)
+            remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+            remote: 
+            remote: Create a pull request for 'TASK10' on GitHub by visiting:
+            remote:      https://github.com/HelloWounderworld/notes-git/pull/new/TASK10
+            remote: 
+            To github.com:HelloWounderworld/notes-git.git
+            * [new branch]      TASK10 -> TASK10
+            Branch 'TASK10' set up to track remote branch 'TASK10' from 'origin'.
+        Note que, acima, basicamente, a sequência em série foi o seguinte, excluo a branch de forma remota, visto que a mesma não é excluída localmente, então altero o nome da branch local e, em seguida, dou, novamente, o git push -u.
+        Lembre-se, se vc estiver fazendo um trabalho em conjunto, e fizer algo de alteração dessa natureza, avisa ao time.                                                                      
 
     Aula 09 - Histórico de alteraçãoes em diferente branch:
 
