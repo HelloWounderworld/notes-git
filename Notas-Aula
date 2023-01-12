@@ -1209,6 +1209,10 @@ Seção 07 - Branches:
         No caso, o comando que foi usado foi:
             - git push --set-upstream origin head-example
             - git push -u origin head-example - Serviria tbm.
+        Visto que a tal branch, que não existia remotamente, agora existe remotamente, nos próximos pushs bastar dar o comando "git push".
+        Agora, uma detalhe curioso.
+        Quando hávimos dado o git clone de um repositório remoto, foi visto que não era necessário dar nenhum --set-upstream.
+        Isso é devido ao fato de que a branch main já vem com esse detalhe configurado.
 
     Aula 06 - Removendo branch local:
 
