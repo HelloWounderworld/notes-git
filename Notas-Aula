@@ -1616,7 +1616,26 @@ Seção 10 - Tags:
     Aula 03 - Enviando tag para o repositório:
         Agora, vamos a aprender a enviar as tags locais para o servidor.
             - git push (nome do caminho) (nome da Tag)
-                
+                leonardo@leonardo-Dell-G15-5520:~/Documentos/estudos/notes-git$ git push origin V0
+                Total 0 (delta 0), reused 0 (delta 0)
+                To github.com:HelloWounderworld/notes-git.git
+                * [new tag]         V0 -> V0
+        Com isso, ao olharmos no github onde está esse repositório projeto, vamos poder ver que a contagem de tags aparecerá como 1, mostrando em qual commit foi feito.
+        Podemos mandar todas as tags de uma vez tbm com o seguinte comando:
+            - git push --tags
+                leonardo@leonardo-Dell-G15-5520:~/Documentos/estudos/notes-git$ git push --tags
+                Enumerating objects: 1, done.
+                Counting objects: 100% (1/1), done.
+                Writing objects: 100% (1/1), 176 bytes | 176.00 KiB/s, done.
+                Total 1 (delta 0), reused 0 (delta 0)
+                To github.com:HelloWounderworld/notes-git.git
+                * [new tag]         V1 -> V1
+                * [new tag]         V2 -> V2
+        No caso, todas as tags criadas localmente, foram enviadas ao servidor/repositório remoto do github.
+        Isso não é uma prática recomandada, pois existem tags que ficam salvas no servidor que depois não é mais necessário e que tal tag ainda reside no mesmo repositório, só que localmente.
+        Daí, realizar o comando acima, fará com que crie, novamente, a mesma marcação que havía sido desconsiderada antes.
+        Logo, vc precisaria ter muita certeza em usar esse comando.
+        Em todo caso, uma boa prática é vc ir dando push de tags específicas que vc marcou.
 
     Aula 04 - Usando tags:
 
