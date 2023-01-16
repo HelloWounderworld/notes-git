@@ -1614,6 +1614,9 @@ Seção 10 - Tags:
             - git tag -a -m "alguma msg" (nome para a tag) (número do commit)
 
     Aula 03 - Enviando tag para o repositório:
+        Agora, vamos a aprender a enviar as tags locais para o servidor.
+            - git push (nome do caminho) (nome da Tag)
+                
 
     Aula 04 - Usando tags:
 
