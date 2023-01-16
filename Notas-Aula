@@ -1548,6 +1548,70 @@ Seção 10 - Tags:
         Isso irá exibir todas as tags.
 
     Aula 02 - Usar tag em commits antigos:
+        Quero realizar uma tag em um commit antigo:
+            - git tag (nome da tag) (número do commit)
+                leonardo@leonardo-Dell-G15-5520:~/Documentos/estudos/notes-git$ git log --oneline
+                7698ed4 (HEAD -> main, origin/main, origin/HEAD) Atualizando as notas de aula
+                d2fd20e (tag: V2, tag: V1) Atualizando as notas de aula sobre conceito tag
+                6549899 Atualizando as notas de aulas minhas
+                1f5c1de Atualizando as notas de aulas próprias
+                cedb5d4 Atualizando as notas de aulas
+                1849886 Atualizando as notas de aula
+                331f357 Atualizando as notas de aula
+                7228cb1 Atualizando as notas de aula
+                68baf0a Atualizando as notas de aula
+                3dd0d95 Atualizando as notas de aula
+                e195982 Atualizando as notas de aula
+                01b9e03 atualizando as notas de aula
+                92e1258 Atualizando as notas de aula
+                be95bbf Atualizando as notas de aula
+                a953567 Atualizando as notas de aula
+                b8f4ddf Atualizando as notas de aula
+                a66b0c0 Atualizando as notas de aula
+                51783b7 Atualizando notas de aula
+                cc635a1 Atualizando as notas de aula
+                8c83887 Atualizando as notas de aula com o usuario certo
+                0fc34ee Atualizando as notas de aula sobre git - controle de versionamento
+                684b766 (develop) Vantagens de pull request para enriquecer o teu curriculo
+                0ac21b5 Leituras para Star, Watch e Fork
+                3b0342a Atualizacao do titulo
+                82864fb Forma de dar push no github - novas regras
+                b2c9f7f Versao inicial do site
+                cd08034 Commit inicial
+                ad8b997 Initial commit
+                leonardo@leonardo-Dell-G15-5520:~/Documentos/estudos/notes-git$ git tag V0 51783b7
+                leonardo@leonardo-Dell-G15-5520:~/Documentos/estudos/notes-git$ git log --oneline
+                7698ed4 (HEAD -> main, origin/main, origin/HEAD) Atualizando as notas de aula
+                d2fd20e (tag: V2, tag: V1) Atualizando as notas de aula sobre conceito tag
+                6549899 Atualizando as notas de aulas minhas
+                1f5c1de Atualizando as notas de aulas próprias
+                cedb5d4 Atualizando as notas de aulas
+                1849886 Atualizando as notas de aula
+                331f357 Atualizando as notas de aula
+                7228cb1 Atualizando as notas de aula
+                68baf0a Atualizando as notas de aula
+                3dd0d95 Atualizando as notas de aula
+                e195982 Atualizando as notas de aula
+                01b9e03 atualizando as notas de aula
+                92e1258 Atualizando as notas de aula
+                be95bbf Atualizando as notas de aula
+                a953567 Atualizando as notas de aula
+                b8f4ddf Atualizando as notas de aula
+                a66b0c0 Atualizando as notas de aula
+                51783b7 (tag: V0) Atualizando notas de aula
+                cc635a1 Atualizando as notas de aula
+                8c83887 Atualizando as notas de aula com o usuario certo
+                0fc34ee Atualizando as notas de aula sobre git - controle de versionamento
+                684b766 (develop) Vantagens de pull request para enriquecer o teu curriculo
+                0ac21b5 Leituras para Star, Watch e Fork
+                3b0342a Atualizacao do titulo
+                82864fb Forma de dar push no github - novas regras
+                b2c9f7f Versao inicial do site
+                cd08034 Commit inicial
+                ad8b997 Initial commit
+        Note que, em um commit antigo, foi feito uma marcação de uma tag.
+        O mesmo vale para a tag do tipo annotaded, pois nela será feito uma marcação mostrando quem foi que fez a tal tag.
+            - git tag -a -m "alguma msg" (nome para a tag) (número do commit)
 
     Aula 03 - Enviando tag para o repositório:
 
