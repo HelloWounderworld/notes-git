@@ -1641,7 +1641,119 @@ Seção 10 - Tags:
         Uma vez criado uma tag, podemos usar a mesma commo um commit.
         No caso, é como usar um commit, só que no lugar de vc especificar o número bizarro do commit, vc pode especificar o nome da tag que foi salva.
             - git checkout (nome da tag salva)
+                leonardo@leonardo-Dell-G15-5520:~/Documentos/estudos/notes-git$ git checkout V1
+                Note: switching to 'V1'.
+
+                You are in 'detached HEAD' state. You can look around, make experimental
+                changes and commit them, and you can discard any commits you make in this
+                state without impacting any branches by switching back to a branch.
+
+                If you want to create a new branch to retain commits you create, you may
+                do so (now or later) by using -c with the switch command. Example:
+
+                git switch -c <new-branch-name>
+
+                Or undo this operation with:
+
+                git switch -
+
+                Turn off this advice by setting config variable advice.detachedHead to false
+
+                HEAD is now at d2fd20e Atualizando as notas de aula sobre conceito tag
+                leonardo@leonardo-Dell-G15-5520:~/Documentos/estudos/notes-git$ git branch
+                * (HEAD detached at V1)
+                develop
+                head-example
+                main
+        Disso, podemos realizar as mesmas mudanças que fizemos, por exemplo, para haed-example, que é uma branch criada.
+        O mesmo pode ser usada para git diff especificando as tags:
+            - git diff (nome da tag)
+                leonardo@leonardo-Dell-G15-5520:~/Documentos/estudos/notes-git$ git diff V1
+                diff --git a/Notas-Aula b/Notas-Aula
+                index d6c02e3..06e607c 100644
+                --- a/Notas-Aula
+                +++ b/Notas-Aula
+                @@ -1410,13 +1410,265 @@ Seção 10 - Tags:
                 
+                        Vamos realizar algumas marcações para mlhor fixar o conceito de tag:
+                            - git tag (nome da marcação) - Versão de tag mais simples, lightwight. Ou seja, não tem tanto peso de importância.
+                +                leonardo@leonardo-Dell-G15-5520:~/Documentos/estudos/notes-git$ git tag V1
+                +                leonardo@leonardo-Dell-G15-5520:~/Documentos/estudos/notes-git$ git log --onoline
+                +                fatal: argumento não reconhecido: --onoline
+                +                leonardo@leonardo-Dell-G15-5520:~/Documentos/estudos/notes-git$ git log --oneline
+                +                d2fd20e (HEAD -> main, tag: V1, origin/main, origin/HEAD) Atualizando as notas de aula sobre conceito tag
+                +                6549899 Atualizando as notas de aulas minhas
+                +                1f5c1de Atualizando as notas de aulas próprias
+                +                cedb5d4 Atualizando as notas de aulas
+                +                1849886 Atualizando as notas de aula
+                +                331f357 Atualizando as notas de aula
+                +                7228cb1 Atualizando as notas de aula
+                +                68baf0a Atualizando as notas de aula
+                +                3dd0d95 Atualizando as notas de aula
+                +                e195982 Atualizando as notas de aula
+                +                01b9e03 atualizando as notas de aula
+                +                92e1258 Atualizando as notas de aula
+                +                be95bbf Atualizando as notas de aula
+                +                a953567 Atualizando as notas de aula
+                +                b8f4ddf Atualizando as notas de aula
+                +                a66b0c0 Atualizando as notas de aula
+                +                51783b7 Atualizando notas de aula
+                +                cc635a1 Atualizando as notas de aula
+                +                8c83887 Atualizando as notas de aula com o usuario certo
+                +                0fc34ee Atualizando as notas de aula sobre git - controle de versionamento
+                +                684b766 (develop) Vantagens de pull request para enriquecer o teu curriculo
+                +                0ac21b5 Leituras para Star, Watch e Fork
+                +                3b0342a Atualizacao do titulo
+                +                82864fb Forma de dar push no github - novas regras
+                +                b2c9f7f Versao inicial do site
+                +                cd08034 Commit inicial
+                +                ad8b997 Initial commit
+                +        Note que, foi feito uma marcação no último commit que eu realizei.
+                +        Mas, vale ressaltar que tal marcação foi feita localmente.
+                +        Ou seja, ela não é remota.
+                +        Isso significa que se vc olhar agora no github no repositório, não haverá alguma tag marcada.
+                +
+            - git diff (nome da tag) (nome da tag) - irá comparar o que mudou de uma para outra.
+                leonardo@leonardo-Dell-G15-5520:~/Documentos/estudos/notes-git$ git diff V0 V2
+                diff --git a/Notas-Aula b/Notas-Aula
+                index 3b32087..d6c02e3 100644
+                --- a/Notas-Aula
+                +++ b/Notas-Aula
+                @@ -1070,30 +1070,360 @@ Seção 07 - Branches:
+                                * TASK-2
+                                develop
+                                main
+                -        
+                
+                    Aula 03 - Mudançãs não salvas:
+                +        Um ponto importante de mudanças não salvas.
+                +        Suponhamos que vc esteja em uma branch realizando as modificações que vc quer e, no meio do processo, vc queria mudar da atual branch para uma outra.
+                +        Ao darmos git checkout para uma outra branch e dermos o git status, veremos que as alterações que vc fez na última branch vem para a branch que vc mudou.
+                +        Ou seja, vc precisa tomar muito cuidado nisso, pois existem alterações que vc quer que ela fique na branch em que vc estava realizando tais alterações.
+                +        No caso, uma boa prática para evitar que isso aconteça seria dando git add e git commit antes de ir para uma outra branch nova.
+                +        Existe tbm uma outra alternativa para isso, que é dando o seguinte comando:
+                +            - git checkout -f (nome da branch existente) - Esse comando irá dar uma limpa em todas as alterações não rastreadas para mudar de branch.
+                +                leonardo@leonardo-Dell-G15-5520:~/Documentos/estudos/notes-git$ git branch
+                +                TASK-1
+                +                TASK-2
+                +                develop
+                +                * main
+                +                leonardo@leonardo-Dell-G15-5520:~/Documentos/estudos/notes-git$ git checkout -f develop
+                +                Switched to branch 'develop'
+                +                leonardo@leonardo-Dell-G15-5520:~/Documentos/estudos/notes-git$ git branch
+                +                TASK-1
+                +                TASK-2
+                +                * develop
+                +                main
+                +        Note que, ao darmos um git checkout . ou git checkout -f, e se vc quiser que o arquivo que vc estava modificando volte na forma como vc estava modificando, basta dar Crtl+z ou Command + Z.
+                
+                    Aula 04 - Detached HEAD:
+                +        Vamos começar fazendo o git log --oneline.
+                +            leonardo@leonardo-Dell-G15-5520:~/Documentos/estudos/notes-git$ git log --oneline
+                +            a66b0c0 (HEAD -> main, origin/main, origin/HEAD) Atualizando as notas de aula
+                +            51783b7 Atualizando notas de aula
+                +            cc635a1 (TASK-2) Atualizando as notas de aula
+        Em ambos os casos, podemos verificar os tipos de alterações que ocorreram.
 
     Aula 05 - Removendo tags:
 
