@@ -1403,6 +1403,14 @@ Seção 09 - Source Control Management (SCM):
 Seção 10 - Tags:
 
     Aula 01 - Criando e Listando tags:
+        Leitura de conceitos:
+            https://github.com/DevMasterTeam/Udemy-Git/blob/master/Se%C3%A7%C3%A3o%2010%20-%20Tags/(Slide)%20Conceitos%20sobre%20Tag.pdf
+            https://docs.github.com/en/rest/git/tags?apiVersion=2022-11-28
+            https://www.atlassian.com/br/git/tutorials/inspecting-a-repository/git-tag#:~:text=git%20tag%20%C3%A9%20em%20geral,t%C3%AAm%20mais%20hist%C3%B3rico%20de%20commits.
+
+        Vamos realizar algumas marcações para mlhor fixar o conceito de tag:
+            - git tag (nome da marcação) - Versão de tag mais simples, lightwight. Ou seja, não tem tanto peso de importância.
+                
 
     Aula 02 - Usar tag em commits antigos:
 
