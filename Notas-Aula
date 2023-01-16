@@ -1638,6 +1638,10 @@ Seção 10 - Tags:
         Em todo caso, uma boa prática é vc ir dando push de tags específicas que vc marcou.
 
     Aula 04 - Usando tags:
+        Uma vez criado uma tag, podemos usar a mesma commo um commit.
+        No caso, é como usar um commit, só que no lugar de vc especificar o número bizarro do commit, vc pode especificar o nome da tag que foi salva.
+            - git checkout (nome da tag salva)
+                
 
     Aula 05 - Removendo tags:
 
