@@ -1756,6 +1756,24 @@ Seção 10 - Tags:
         Em ambos os casos, podemos verificar os tipos de alterações que ocorreram.
 
     Aula 05 - Removendo tags:
+        Uma forma de remover a tag temos duas formas, uma forma remove a tag localmente e, outra, remove no servidor remoto.
+        Remoção local:
+            - git tag -d (nome da tag)
+                leonardo@leonardo-Dell-G15-5520:~/Documentos/estudos/notes-git$ git tag -d V0
+                Deleted tag 'V0' (was 51783b7)
+                leonardo@leonardo-Dell-G15-5520:~/Documentos/estudos/notes-git$ git tag -d V2
+                Deleted tag 'V2' (was 64ecfa4)
+        Note que, a remoção das tags indifere se é do tipo lightweight ou annotated.
+        Remoção do servidor remoto:
+            - git push --delete (nome do caminho) (nome da tag)
+                leonardo@leonardo-Dell-G15-5520:~/Documentos/estudos/notes-git$ git push --delete origin V0
+                To github.com:HelloWounderworld/notes-git.git
+                - [deleted]         V0
+                leonardo@leonardo-Dell-G15-5520:~/Documentos/estudos/notes-git$ git push --delete V2
+                fatal: --delete doesn't make sense without any refs
+                leonardo@leonardo-Dell-G15-5520:~/Documentos/estudos/notes-git$ git push --delete origin V2
+                To github.com:HelloWounderworld/notes-git.git
+                - [deleted]         V2
 
 Seção 11 - Stash:
 
