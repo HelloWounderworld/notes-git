@@ -1410,7 +1410,142 @@ Seção 10 - Tags:
 
         Vamos realizar algumas marcações para mlhor fixar o conceito de tag:
             - git tag (nome da marcação) - Versão de tag mais simples, lightwight. Ou seja, não tem tanto peso de importância.
+                leonardo@leonardo-Dell-G15-5520:~/Documentos/estudos/notes-git$ git tag V1
+                leonardo@leonardo-Dell-G15-5520:~/Documentos/estudos/notes-git$ git log --onoline
+                fatal: argumento não reconhecido: --onoline
+                leonardo@leonardo-Dell-G15-5520:~/Documentos/estudos/notes-git$ git log --oneline
+                d2fd20e (HEAD -> main, tag: V1, origin/main, origin/HEAD) Atualizando as notas de aula sobre conceito tag
+                6549899 Atualizando as notas de aulas minhas
+                1f5c1de Atualizando as notas de aulas próprias
+                cedb5d4 Atualizando as notas de aulas
+                1849886 Atualizando as notas de aula
+                331f357 Atualizando as notas de aula
+                7228cb1 Atualizando as notas de aula
+                68baf0a Atualizando as notas de aula
+                3dd0d95 Atualizando as notas de aula
+                e195982 Atualizando as notas de aula
+                01b9e03 atualizando as notas de aula
+                92e1258 Atualizando as notas de aula
+                be95bbf Atualizando as notas de aula
+                a953567 Atualizando as notas de aula
+                b8f4ddf Atualizando as notas de aula
+                a66b0c0 Atualizando as notas de aula
+                51783b7 Atualizando notas de aula
+                cc635a1 Atualizando as notas de aula
+                8c83887 Atualizando as notas de aula com o usuario certo
+                0fc34ee Atualizando as notas de aula sobre git - controle de versionamento
+                684b766 (develop) Vantagens de pull request para enriquecer o teu curriculo
+                0ac21b5 Leituras para Star, Watch e Fork
+                3b0342a Atualizacao do titulo
+                82864fb Forma de dar push no github - novas regras
+                b2c9f7f Versao inicial do site
+                cd08034 Commit inicial
+                ad8b997 Initial commit
+        Note que, foi feito uma marcação no último commit que eu realizei.
+        Mas, vale ressaltar que tal marcação foi feita localmente.
+        Ou seja, ela não é remota.
+        Isso significa que se vc olhar agora no github no repositório, não haverá alguma tag marcada.
+        Não podemos duplicar uma tag com o mesmo nome. O que podemos é mudar o seu nome.
+        Agora, vamos criar uma tag mais completa:
+            - git tag -a -m "alguma msg" (nome da tag) - Essa tag é um tipo annotaded.
+                leonardo@leonardo-Dell-G15-5520:~/Documentos/estudos/notes-git$ git tag -a -m "Tag criada v2" V2
+                leonardo@leonardo-Dell-G15-5520:~/Documentos/estudos/notes-git$ git log --oneline
+                d2fd20e (HEAD -> main, tag: V2, tag: V1, origin/main, origin/HEAD) Atualizando as notas de aula sobre conceito tag
+                6549899 Atualizando as notas de aulas minhas
+                1f5c1de Atualizando as notas de aulas próprias
+                cedb5d4 Atualizando as notas de aulas
+                1849886 Atualizando as notas de aula
+                331f357 Atualizando as notas de aula
+                7228cb1 Atualizando as notas de aula
+                68baf0a Atualizando as notas de aula
+                3dd0d95 Atualizando as notas de aula
+                e195982 Atualizando as notas de aula
+                01b9e03 atualizando as notas de aula
+                92e1258 Atualizando as notas de aula
+                be95bbf Atualizando as notas de aula
+                a953567 Atualizando as notas de aula
+                b8f4ddf Atualizando as notas de aula
+                a66b0c0 Atualizando as notas de aula
+                51783b7 Atualizando notas de aula
+                cc635a1 Atualizando as notas de aula
+                8c83887 Atualizando as notas de aula com o usuario certo
+                0fc34ee Atualizando as notas de aula sobre git - controle de versionamento
+                684b766 (develop) Vantagens de pull request para enriquecer o teu curriculo
+                0ac21b5 Leituras para Star, Watch e Fork
+                3b0342a Atualizacao do titulo
+                82864fb Forma de dar push no github - novas regras
+                b2c9f7f Versao inicial do site
+                cd08034 Commit inicial
+                ad8b997 Initial commit
+        Essa tag tbm irá marcar no último commit realizado.
+        A diferença entre as duas tags mostrada até agora, seria que a segunda tag, annotaded, tem como finalidade não apenas marcar, mas mostrar quem a marcou.
+        Basta dar o seguinte comando para mostrar quem foi feito a tal marcação:
+            - git show (nome que foi atribuído à tag)
+                leonardo@leonardo-Dell-G15-5520:~/Documentos/estudos/notes-git$ git show V2
+                tag V2
+                Tagger: Leonardo Takashi Teramatsu <leonardo.teramatsu@gmail.com>
+                Date:   Mon Jan 16 11:03:44 2023 -0300
+
+                Tag criada v2
+
+                commit d2fd20ef0689aa1e157ef79d8d6244a29c8b10a4 (HEAD -> main, tag: V2, tag: V1, origin/main, origin/HEAD)
+                Author: Leonardo Takashi Teramatsu <leonardo.teramatsu@gmail.com>
+                Date:   Mon Jan 16 10:59:30 2023 -0300
+
+                    Atualizando as notas de aula sobre conceito tag
+
+                diff --git a/Notas-Aula b/Notas-Aula
+                index d356b31..d6c02e3 100644
+                --- a/Notas-Aula
+                +++ b/Notas-Aula
+                @@ -1403,6 +1403,14 @@ Seção 09 - Source Control Management (SCM):
+                Seção 10 - Tags:
                 
+                    Aula 01 - Criando e Listando tags:
+                +        Leitura de conceitos:
+                +            https://github.com/DevMasterTeam/Udemy-Git/blob/master/Se%C3%A7%C3%A3o%2010%20-%20Tags/(Slide)%20Conceitos%20sobre%20Tag.pdf
+                +            https://docs.github.com/en/rest/git/tags?apiVersion=2022-11-28
+                +            https://www.atlassian.com/br/git/tutorials/inspecting-a-repository/git-tag#:~:text=git%20tag%20%C3%A9%20em%20geral,t%C3%AAm%20mais%20hist%C3%B3rico%20de%20commits.
+                +
+                +        Vamos realizar algumas marcações para mlhor fixar o conceito de tag:
+                +            - git tag (nome da marcação) - Versão de tag mais simples, lightwight. Ou seja, não tem tanto peso de importância.
+                +                
+                
+                    Aula 02 - Usar tag em commits antigos:
+        Note que, acima é mostrado todas as informações e quem fez a tal marcação.
+        Diferentemente da outra tag que faz apenas uma marcação.
+            leonardo@leonardo-Dell-G15-5520:~/Documentos/estudos/notes-git$ git show V1
+            commit d2fd20ef0689aa1e157ef79d8d6244a29c8b10a4 (HEAD -> main, tag: V2, tag: V1, origin/main, origin/HEAD)
+            Author: Leonardo Takashi Teramatsu <leonardo.teramatsu@gmail.com>
+            Date:   Mon Jan 16 10:59:30 2023 -0300
+
+                Atualizando as notas de aula sobre conceito tag
+
+            diff --git a/Notas-Aula b/Notas-Aula
+            index d356b31..d6c02e3 100644
+            --- a/Notas-Aula
+            +++ b/Notas-Aula
+            @@ -1403,6 +1403,14 @@ Seção 09 - Source Control Management (SCM):
+            Seção 10 - Tags:
+            
+                Aula 01 - Criando e Listando tags:
+            +        Leitura de conceitos:
+            +            https://github.com/DevMasterTeam/Udemy-Git/blob/master/Se%C3%A7%C3%A3o%2010%20-%20Tags/(Slide)%20Conceitos%20sobre%20Tag.pdf
+            +            https://docs.github.com/en/rest/git/tags?apiVersion=2022-11-28
+            +            https://www.atlassian.com/br/git/tutorials/inspecting-a-repository/git-tag#:~:text=git%20tag%20%C3%A9%20em%20geral,t%C3%AAm%20mais%20hist%C3%B3rico%20de%20commits.
+            +
+            +        Vamos realizar algumas marcações para mlhor fixar o conceito de tag:
+            +            - git tag (nome da marcação) - Versão de tag mais simples, lightwight. Ou seja, não tem tanto peso de importância.
+            +                
+            
+                Aula 02 - Usar tag em commits antigos:
+        No caso, aqui só tem apens o detalhe do commit, mas não é mostrado o tagger.
+        Para consultar todas as tags do projeto, basta colocar:
+            - git tag
+                leonardo@leonardo-Dell-G15-5520:~/Documentos/estudos/notes-git$ git tag
+                V1
+                V2
+        Isso irá exibir todas as tags.
 
     Aula 02 - Usar tag em commits antigos:
 
