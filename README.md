@@ -7,5 +7,8 @@ Este repositório é referente ao curso da [DevMasterTeam](http://www.devmastert
 
 **DevMasterTeam**
 
-### Referências e meios para estudo:
+## Referências e meios para estudo:
 O estudo foi feito em cima de um curso da Udemy chamado "Git Completo: Do Básico ao Avançado" e, durante o curso, usei uma referência chamado Git Pro - Scott Chacon, Ben Straub - Second Edition, Editora Apress, foram feitas apenas algumas consultas.
+
+## 今日からは日本を拠点としてこのコンテンツの作成をつづけます：
+G16　Dellのゲーミングノートパソコンからのプッシュテスト。
